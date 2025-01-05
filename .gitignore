@@ -1,0 +1,32 @@
+# Ignore node_modules folder
+node_modules/
+
+# Ignore environment variables and secrets
+.env
+.env.local
+.env.*.local
+
+# Ignore build artifacts
+artifacts/
+cache/
+
+# Ignore coverage files
+coverage/
+coverage.json
+
+# Ignore Hardhat's temporary files
+typechain/
+typechain-types/
+
+# Ignore editor and OS-specific files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+.idea/
+.vscode/
+*.swp
+
+# Ignore test coverage reports
+coverage/
+lcov-report/
