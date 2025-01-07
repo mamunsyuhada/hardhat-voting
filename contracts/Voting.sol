@@ -1,6 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// https://sepolia.etherscan.io/address/0x8646CeD5291A277F18B736e685cE871E69070e51#code
+// https://sepolia.etherscan.io/address/0xD0257b618232AF348E75F62c93342Bc76110B958#code
+
 contract Voting {
     struct Proposal {
         string name;
@@ -93,7 +96,7 @@ contract Voting {
 
     function undoVote(uint256 proposalId) public {
         require(proposalId < proposals.length, "Invalid proposal ID");
-        Proposal memory proposal = proposals[proposalId];
+        Proposal storage proposal = proposals[proposalId];
 
         require(
             block.timestamp >= proposal.startDate &&
@@ -123,7 +126,7 @@ contract Voting {
         )
     {
         require(proposalId < proposals.length, "Invalid proposal ID");
-        Proposal memory proposal = proposals[proposalId];
+        Proposal storage proposal = proposals[proposalId];
         return (
             proposal.name,
             proposal.description,

@@ -5,9 +5,16 @@ This project demonstrates a basic Hardhat use case. It comes with a sample contr
 Try running some of the following tasks:
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
 npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
+npx hardhat run ignition/deploy.js --network sepolia
 ```
+
+## Deployed Smart Contract on Sepolia Testnet
+
+You can view the smart contract details on Sepolia Etherscan:
+
+[View Contract on Sepolia Etherscan](https://sepolia.etherscan.io/address/0x71D5136Db74A5620633296a017A233d69091739C#readContract)
+
+## Integrated with dApps (FrontEnd)
+
+[Frontend dApps](https://github.com/mamunsyuhada/voting-dapps)

@@ -11,7 +11,7 @@ module.exports = {
       url: "http://127.0.0.1:8545",
     },
     sepolia: {
-      url: process.env.URL_SEPOLIA,
+      url: process.env.RPC,
       accounts: [`0x${process.env.PRIVATE_KEY}`],
     },
   },
